@@ -42,3 +42,4 @@ final class StubURLSessionDataTask: URLSessionDataTask {
         dummyData?.completion()
     }
 }
+
