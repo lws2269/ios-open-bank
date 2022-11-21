@@ -80,7 +80,15 @@ extension MainViewController {
             cell.layer.borderColor = UIColor.darkGray.cgColor
             cell.layer.borderWidth = 1
             cell.layer.cornerRadius = 10
-            cell.itemImageView.image = UIImage(systemName: "person")
+
+            if let url = URL(string: item.thumbnail) {
+                NetworkManager().fetchImage(url: url) { image in
+                    DispatchQueue.main.async {
+                        cell.itemImageView.image = image
+                    }
+                }
+            }
+
             cell.itemNameLabel.text = item.name
             cell.priceLabel.text = "\(item.currency.rawValue) \(item.price)"
 
