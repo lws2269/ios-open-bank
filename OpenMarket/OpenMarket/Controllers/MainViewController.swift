@@ -94,6 +94,7 @@ extension MainViewController {
 
             if item.bargainPrice != 0 {
                 cell.priceLabel.textColor = .systemRed
+                cell.priceLabel.attributedText = cell.priceLabel.text?.strikeThrough()
                 cell.bargainPrice.text = "\(item.currency.rawValue) \(item.bargainPrice)"
             }
 
