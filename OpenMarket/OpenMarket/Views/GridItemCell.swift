@@ -1,5 +1,5 @@
 //
-//  GridCollectionViewCell.swift
+//  GridItemCell.swift
 //  OpenMarket
 //
 //  Created by 노유빈 on 2022/11/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GridCollectionViewCell: UICollectionViewCell {
+class GridItemCell: UICollectionViewCell {
     override var reuseIdentifier: String {
         return String(describing: Self.self)
     }
